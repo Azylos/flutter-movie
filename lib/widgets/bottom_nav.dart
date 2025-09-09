@@ -14,19 +14,19 @@ class BottomNav extends StatelessWidget {
             onPressed: () {
               print('movie liker');
             },
-            icon: const Icon(Icons.favorite, color: Colors.purpleAccent),
+            icon: const Icon(Icons.favorite, color: Colors.deepPurpleAccent),
           ),
           IconButton(
             onPressed: () {
               print('home');
             },
-            icon: const Icon(Icons.home, color: Colors.purpleAccent),
+            icon: const Icon(Icons.home, color: Colors.deepPurpleAccent),
           ),
           IconButton(
             onPressed: () {
               print('profil');
             },
-            icon: const Icon(Icons.person, color: Colors.purpleAccent),
+            icon: const Icon(Icons.person, color: Colors.deepPurpleAccent),
           ),
         ],
       ),
