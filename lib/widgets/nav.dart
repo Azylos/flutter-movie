@@ -15,11 +15,17 @@ class Nav extends StatelessWidget {
         child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            TextButton(
-              onPressed: (){print('Tous');},
-                child: Text(
-                "Tous".toUpperCase(),
-                ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5.5),
+                color: const Color.fromARGB(145, 73, 72, 72),
+              ),
+              child: TextButton(
+                onPressed: (){print('Tous');},
+                  child: Text(
+                  "Tous".toUpperCase(),
+                  ),
+              ),
             ),
             TextButton(
               onPressed: (){print('Western');},
