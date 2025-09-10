@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies/views/favoris_page.dart';
 import 'package:movies/views/home.dart';
+import 'package:movies/views/single_movie_page.dart';
 
 class BottomNav extends StatelessWidget {
   const BottomNav({super.key});
@@ -35,6 +36,15 @@ class BottomNav extends StatelessWidget {
               print('profil');
             },
             icon: const Icon(Icons.person, color: Colors.deepPurpleAccent),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => SingleMoviePage()),
+              );
+            },
+            icon: const Icon(Icons.movie, color: Colors.deepPurpleAccent),
           ),
         ],
       ),
