@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movies/views/favoris_page.dart';
+import 'package:movies/views/home.dart';
 
 class BottomNav extends StatelessWidget {
   const BottomNav({super.key});
@@ -12,13 +14,19 @@ class BottomNav extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              print('movie liker');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FavorisPage()),
+              );
             },
             icon: const Icon(Icons.favorite, color: Colors.deepPurpleAccent),
           ),
           IconButton(
             onPressed: () {
-              print('home');
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
             },
             icon: const Icon(Icons.home, color: Colors.deepPurpleAccent),
           ),
