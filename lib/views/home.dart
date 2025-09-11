@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies/widgets/bottom_nav.dart';
-import 'package:movies/widgets/feed.dart';
-import 'package:movies/widgets/header.dart';
+import 'package:movies/widgets/movie_card.dart';
 import 'package:movies/widgets/nav.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,7 +13,27 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: const BottomNav(),
       body: Column(
         children: [
-          Header(),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              height: 130,
+              color: const Color.fromARGB(119, 97, 7, 165),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 32.5),
+                child: Center(
+                  child: Text(
+                    "Movie App", 
+                    style:TextStyle(
+                      fontSize: 48,
+                      fontFamily: 'SuperTrend',
+                      color: Colors.white
+                    )
+                  ),
+                ),
+              ),
+            ),
+          ),
+
           Nav(),
           // section image a faire en carrousel
           Stack(
@@ -48,7 +67,44 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          Feed(),  
+          SizedBox(
+            height: 420,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: ListView(
+                children: const [
+                  MovieCard(
+                    moviePics: 'assets/images/kled.webp',
+                    title: 'Drow',
+                    synopsis:
+                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates!',
+                    rating: 5,
+                  ),
+                  MovieCard(
+                    moviePics: 'assets/images/kled.webp',
+                    title: 'Drow 2',
+                    synopsis:
+                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates!',
+                    rating: 5,
+                  ),
+                  MovieCard(
+                    moviePics: 'assets/images/kled.webp',
+                    title: 'Drow 3',
+                    synopsis:
+                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates!',
+                    rating: 5,
+                  ),
+                  MovieCard(
+                    moviePics: 'assets/images/kled.webp',
+                    title: 'Drow 4',
+                    synopsis:
+                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias molestias ipsam maiores eveniet quasi ab, eligendi, libero tempora, fuga temporibus reiciendis. Nostrum vitae placeat consequatur maxime iste nihil natus voluptates!',
+                    rating: 5,
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       )
     );
